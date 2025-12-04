@@ -1,28 +1,23 @@
-public class InsertionsortSimples {
+public class InsertionSort {
 
     public static void main(String[] args) {
 
-        int[] numeros = { 5, 2, 9, 1, 3 };
-        insertionSort(numeros);
+        int[] v = {5, 2, 9, 1, 3};
 
-        System.out.println("Vetor ordenado:");
-        for (int n : numeros) {
-            System.out.print(n + " ");
-        }
-    }
-
-    public static void insertionSort(int[] vetor) {
-        for (int i = 1; i < vetor.length; i++) {
-
-            int chave = vetor[i];
+        for (int i = 1; i < v.length; i++) {
+            int chave = v[i];
             int j = i - 1;
 
-            while (j >= 0 && vetor[j] > chave) {
-                vetor[j + 1] = vetor[j];
+            while (j >= 0 && v[j] > chave) {
+                v[j + 1] = v[j];
                 j--;
             }
 
-            vetor[j + 1] = chave;
+            v[j + 1] = chave;
+        }
+
+        for (int num : v) {
+            System.out.print(num + " ");
         }
     }
 }
